@@ -3,6 +3,7 @@
 .LSOverride
 iisnode.yml
 npm-debug.log
+test.min.js
 
 db/shortly.sqlite
 node_modules

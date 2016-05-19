@@ -3,6 +3,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
+      dist: {
+        src: ['public/client/*.js'],
+        dest: 'public/Dest/test.js'
+      }
     },
 
     mochaTest: {
@@ -21,11 +25,19 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      options: {
+        mangle: false
+      },
+      'my_target': {
+        files: {
+          'public/Dest/test.min.js': ['public/Dest/test.js']
+        }
+      }
     },
 
     eslint: {
       target: [
-        // Add list of files to lint here
+        'public/Dest/test.min.js'
       ]
     },
 
@@ -71,7 +83,8 @@ module.exports = function(grunt) {
   ////////////////////////////////////////////////////
   // Main grunt tasks
   ////////////////////////////////////////////////////
-
+  grunt.registerTask('default', ['concat', 'uglify']);
+  
   grunt.registerTask('test', [
     'mochaTest'
   ]);
@@ -88,6 +101,8 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('deploy', [
+    'eslint',
+    'mochaTest'
     // add your deploy tasks here
   ]);
 
