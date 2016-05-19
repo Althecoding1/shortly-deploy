@@ -14,8 +14,9 @@
     "lint": "eslint ./"
   },
   "dependencies": {
+    "array-flatten": "1.1.1",
     "bcrypt-nodejs": "0.0.3",
-    "bluebird": "^3.3.4",
+    "bluebird": "^2.9.4",
     "body-parser": "^1.15.0",
     "bookshelf": "^0.9.1",
     "chai": "^3.5.0",
