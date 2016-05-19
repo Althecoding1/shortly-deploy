@@ -101,9 +101,10 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('deploy', [
+    'server-dev',
     'eslint',
     'mochaTest'
-    // add your deploy tasks here
+    // add yougr deploy tasks here
   ]);
 
 
