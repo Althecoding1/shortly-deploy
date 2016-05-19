@@ -3,6 +3,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
+      js: {
+        src: 'src/js/*.js',
+        dest: 'dest/js/concat.js'
+      },
     },
 
     mochaTest: {
