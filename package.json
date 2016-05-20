@@ -16,7 +16,7 @@
   "dependencies": {
     "array-flatten": "1.1.1",
     "bcrypt-nodejs": "0.0.3",
-    "bluebird": "^2.9.4",
+    "bluebird": "^2.10.2",
     "body-parser": "^1.15.0",
     "bookshelf": "^0.9.1",
     "chai": "^3.5.0",
@@ -37,7 +37,8 @@
     "grunt-shell": "^1.2.1",
     "knex": "^0.10.0",
     "mocha": "^2.4.5",
-    "mongoose": "^4.4.10",
+    "mongodb": "^2.1.19",
+    "mongoose": "^4.4.17",
     "request": "^2.34.0",
     "sqlite3": "~3.1.1"
   },
